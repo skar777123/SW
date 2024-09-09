@@ -107,7 +107,11 @@ const user = new Schema(
       type: String,
       required: true,
     },
-    attendance: {
+    attendance1: {
+      type: String,
+      required: true,
+    },
+    attendance2: {
       type: String,
       required: true,
     },
