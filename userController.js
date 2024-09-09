@@ -29,7 +29,8 @@ export const Data = async (req, res) => {
     bankUpload,
     ReHOD,
     ReDoP,
-    attendance,
+    attendance1,
+    attendance2,
     eleBill,
   } = req.body;
   try {
@@ -60,7 +61,8 @@ export const Data = async (req, res) => {
       bankUpload,
       ReHOD,
       ReDoP,
-      attendance,
+     attendance1,
+    attendance2,
       eleBill,
     });
     res.status(200).json({
