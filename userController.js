@@ -74,6 +74,10 @@ export const Data = async (req, res) => {
       message: "User created successfully",
       user,
     });
+    res.header(
+"Access-Control-Allow-Origin",
+"*"
+);
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -110,6 +114,10 @@ export const login = async (req, res) => {
     } else {
       res.status(400).json({ success: false, message: "Invalid credentials" });
     }
+    res.header(
+"Access-Control-Allow-Origin",
+"*"
+);
   } catch (error) {
     req.status(400).json({
       success: false,
@@ -127,6 +135,10 @@ export const register = async (req, res) => {
         success: true,
         message: "User created successfully",
       });
+      res.header(
+"Access-Control-Allow-Origin",
+"*"
+);
     }
   } catch (error) {
     res.status(400).json({
