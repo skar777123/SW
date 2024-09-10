@@ -73,16 +73,7 @@ export const Data = async (req, res) => {
       success: true,
       message: "User created successfully",
       user,
-    }).setHeader(
-"Access-Control-Allow-Origin",
-"https://scholarship-doi-birla.vercel.app/"
-).setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
-  ).setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
-  ).setHeader("Access-Control-Allow-Credentials", true);
+    });
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -98,16 +89,7 @@ export const fetch = async (req, res) => {
       success: true,
       message: "User fetched successfully",
       user,
-    }).setHeader(
-"Access-Control-Allow-Origin",
-"https://scholarship-doi-birla.vercel.app/"
-).setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
-  ).setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
-  ).setHeader("Access-Control-Allow-Credentials", true);
+    });
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -124,16 +106,7 @@ export const login = async (req, res) => {
     if (user.password == password) {
       res
         .status(200)
-        .json({ success: true, message: "User logged in successfully" }).setHeader(
-"Access-Control-Allow-Origin",
-"https://scholarship-doi-birla.vercel.app/"
-).setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
-  ).setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
-  ).setHeader("Access-Control-Allow-Credentials", true);
+        .json({ success: true, message: "User logged in successfully" });
     } else {
       res.status(400).json({ success: false, message: "Invalid credentials" });
     }
@@ -154,16 +127,7 @@ export const register = async (req, res) => {
       res.status(201).json({
         success: true,
         message: "User created successfully",
-      }).setHeader(
-"Access-Control-Allow-Origin",
-"https://scholarship-doi-birla.vercel.app/"
-).setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
-  ).setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
-  ).setHeader("Access-Control-Allow-Credentials", true);
+      });
     }
   } catch (error) {
     res.status(400).json({
