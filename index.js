@@ -22,7 +22,9 @@ app.use(
   cors({
     origin: "https://scholarship-doi-birla.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: "*",
+    allowedHeaders: {
+      "Access-Control-Allow-Origin": "*",
+    },
   })
 );
 
