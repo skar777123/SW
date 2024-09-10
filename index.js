@@ -20,7 +20,7 @@ app.use(express.json());
 app.use("/form", userRouter);
 app.use(
   cors({
-    origin: ["*","https://scholarship-doi-birla.vercel.app","https://scholarship-doi-birla.vercel.app/Admin-login" ],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: "*",
   })
