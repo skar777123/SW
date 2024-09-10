@@ -22,7 +22,9 @@ app.use(
   cors({
     origin: "http://loacalhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: "*"
+    allowedHeaders: {
+      "Access-Control-Allow-Origin" : "http://loacalhost:3000"
+    }
   })
 );
 
