@@ -22,6 +22,10 @@ const user = new Schema(
       type: String,
       required: true,
     },
+    feeReceipt: {
+      type: String,
+      required: true,
+    },
     studentId: {
       type: String,
       required: true,
