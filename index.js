@@ -24,7 +24,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: "*"
   })
-//);
+);
 
 mongoose.connect(process.env.URL).then(() => {
   console.log("Connected to MongoDB");
@@ -32,4 +32,4 @@ mongoose.connect(process.env.URL).then(() => {
     console.log(`Server is running on port 3000 - ${process.pid}`);
   });
 });
-}
+//}
