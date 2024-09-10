@@ -23,7 +23,7 @@ app.use(
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: {
-      "Access-Control-Allow-Origin": "https://scholarship-doi-birla.vercel.app",
+      "Access-Control-Allow-Origin": ["https://scholarship-doi-birla.vercel.app/","https://scholarship-doi-birla.vercel.app/Admin-login"],
     },
   })
 );
