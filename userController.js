@@ -73,7 +73,7 @@ export const Data = async (req, res) => {
       success: true,
       message: "User created successfully",
       user,
-    }).header(
+    }).setHeader(
 "Access-Control-Allow-Origin",
 "https://scholarship-doi-birla.vercel.app/"
 );
@@ -92,7 +92,7 @@ export const fetch = async (req, res) => {
       success: true,
       message: "User fetched successfully",
       user,
-    }).header(
+    }).setHeader(
 "Access-Control-Allow-Origin",
 "https://scholarship-doi-birla.vercel.app/"
 );
@@ -112,7 +112,7 @@ export const login = async (req, res) => {
     if (user.password == password) {
       res
         .status(200)
-        .json({ success: true, message: "User logged in successfully" }).header(
+        .json({ success: true, message: "User logged in successfully" }).setHeader(
 "Access-Control-Allow-Origin",
 "https://scholarship-doi-birla.vercel.app/"
 );
@@ -136,7 +136,7 @@ export const register = async (req, res) => {
       res.status(201).json({
         success: true,
         message: "User created successfully",
-      }).header(
+      }).setHeader(
 "Access-Control-Allow-Origin",
 "https://scholarship-doi-birla.vercel.app/"
 );
