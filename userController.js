@@ -75,7 +75,7 @@ export const Data = async (req, res) => {
       user,
     }).header(
 "Access-Control-Allow-Origin",
-"*"
+"https://scholarship-doi-birla.vercel.app/"
 );
   } catch (error) {
     res.status(400).json({
@@ -94,7 +94,7 @@ export const fetch = async (req, res) => {
       user,
     }).header(
 "Access-Control-Allow-Origin",
-"*"
+"https://scholarship-doi-birla.vercel.app/"
 );
   } catch (error) {
     res.status(400).json({
@@ -114,7 +114,7 @@ export const login = async (req, res) => {
         .status(200)
         .json({ success: true, message: "User logged in successfully" }).header(
 "Access-Control-Allow-Origin",
-"*"
+"https://scholarship-doi-birla.vercel.app/"
 );
     } else {
       res.status(400).json({ success: false, message: "Invalid credentials" });
@@ -138,7 +138,7 @@ export const register = async (req, res) => {
         message: "User created successfully",
       }).header(
 "Access-Control-Allow-Origin",
-"*"
+"https://scholarship-doi-birla.vercel.app/"
 );
     }
   } catch (error) {
