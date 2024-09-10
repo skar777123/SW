@@ -20,7 +20,7 @@ app.use(express.json());
 app.use("/form", userRouter);
 app.use(
   cors({
-    origin: "*",
+    origin: "https://loacalhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: "*"
   })
