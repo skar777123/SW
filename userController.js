@@ -73,8 +73,7 @@ export const Data = async (req, res) => {
       success: true,
       message: "User created successfully",
       user,
-    });
-    res.header(
+    }).header(
 "Access-Control-Allow-Origin",
 "*"
 );
@@ -93,7 +92,10 @@ export const fetch = async (req, res) => {
       success: true,
       message: "User fetched successfully",
       user,
-    });
+    }).header(
+"Access-Control-Allow-Origin",
+"*"
+);
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -110,14 +112,14 @@ export const login = async (req, res) => {
     if (user.password == password) {
       res
         .status(200)
-        .json({ success: true, message: "User logged in successfully" });
-    } else {
-      res.status(400).json({ success: false, message: "Invalid credentials" });
-    }
-    res.header(
+        .json({ success: true, message: "User logged in successfully" }).header(
 "Access-Control-Allow-Origin",
 "*"
 );
+    } else {
+      res.status(400).json({ success: false, message: "Invalid credentials" });
+    }
+   
   } catch (error) {
     req.status(400).json({
       success: false,
@@ -134,8 +136,7 @@ export const register = async (req, res) => {
       res.status(201).json({
         success: true,
         message: "User created successfully",
-      });
-      res.header(
+      }).header(
 "Access-Control-Allow-Origin",
 "*"
 );
