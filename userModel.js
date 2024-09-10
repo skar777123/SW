@@ -10,6 +10,10 @@ const user = new Schema(
       type: String,
       required: true,
     },
+    DOB: {
+      type: String,
+      required: true,
+    },
     course: {
       type: String,
       required: true,
