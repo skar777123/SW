@@ -22,9 +22,6 @@ app.use(
   cors({
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: {
-      "Access-Control-Allow-Origin": [ "https://localhost:3000","https://scholarship-doi-birla.vercel.app/","https://scholarship-doi-birla.vercel.app/Admin-login"],
-    },
   })
 );
 
