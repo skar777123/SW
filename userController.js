@@ -69,8 +69,8 @@ export const Data = async (req, res) => {
     attendance2,
       eleBill,
     });
-    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/");
-    res.status(200).json({
+    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
+      .status(200).json({
       success: true,
       message: "User created successfully",
       user,
@@ -86,8 +86,8 @@ export const Data = async (req, res) => {
 export const fetch = async (req, res) => {
   try {
     const user = await User.find();
-    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/");
-    res.status(200).json({
+    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
+      .status(200).json({
       success: true,
       message: "User fetched successfully",
       user,
@@ -106,9 +106,8 @@ export const login = async (req, res) => {
     const user = await Admin.findOne({ name });
 
     if (user.password == password) 
-    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/");
-      res
-        .status(200)
+    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
+      .status(200)
         .json({ success: true, message: "User logged in successfully" });
     } else {
       res.status(400).json({ success: false, message: "Invalid credentials" });
@@ -127,8 +126,8 @@ export const register = async (req, res) => {
   try {
     const admin = await Admin.create({ name, password });
     if (admin) {
-      res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/");
-      res.status(201).json({
+      res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
+        .status(201).json({
         success: true,
         message: "User created successfully",
       });
