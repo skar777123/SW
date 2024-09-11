@@ -65,16 +65,21 @@ export const Data = async (req, res) => {
       bankUpload,
       ReHOD,
       ReDoP,
-     attendance1,
-    attendance2,
+      attendance1,
+      attendance2,
       eleBill,
     });
-    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
-      .status(200).json({
-      success: true,
-      message: "User created successfully",
-      user,
-    });
+    res
+      .header(
+        "Access-Control-Allow-Origin",
+        "https://scholarship-form-birla-4vuq.vercel.app/"
+      )
+      .status(200)
+      .json({
+        success: true,
+        message: "User created successfully",
+        user,
+      });
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -86,12 +91,17 @@ export const Data = async (req, res) => {
 export const fetch = async (req, res) => {
   try {
     const user = await User.find();
-    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
-      .status(200).json({
-      success: true,
-      message: "User fetched successfully",
-      user,
-    });
+    res
+      .header(
+        "Access-Control-Allow-Origin",
+        "https://scholarship-form-birla-4vuq.vercel.app/"
+      )
+      .status(200)
+      .json({
+        success: true,
+        message: "User fetched successfully",
+        user,
+      });
   } catch (error) {
     res.status(400).json({
       success: false,
@@ -105,14 +115,17 @@ export const login = async (req, res) => {
   try {
     const user = await Admin.findOne({ name });
 
-    if (user.password == password) 
-    res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
-      .status(200)
+    if (user.password == password) {
+      res
+        .header(
+          "Access-Control-Allow-Origin",
+          "https://scholarship-form-birla-4vuq.vercel.app/"
+        )
+        .status(200)
         .json({ success: true, message: "User logged in successfully" });
     } else {
       res.status(400).json({ success: false, message: "Invalid credentials" });
     }
-   
   } catch (error) {
     req.status(400).json({
       success: false,
@@ -126,11 +139,16 @@ export const register = async (req, res) => {
   try {
     const admin = await Admin.create({ name, password });
     if (admin) {
-      res.header("Access-Control-Allow-Origin" , "https://scholarship-form-birla-4vuq.vercel.app/")
-        .status(201).json({
-        success: true,
-        message: "User created successfully",
-      });
+      res
+        .header(
+          "Access-Control-Allow-Origin",
+          "https://scholarship-form-birla-4vuq.vercel.app/"
+        )
+        .status(201)
+        .json({
+          success: true,
+          message: "User created successfully",
+        });
     }
   } catch (error) {
     res.status(400).json({
