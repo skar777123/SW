@@ -119,7 +119,7 @@ export const login = async (req, res) => {
       res
         .header(
           "Access-Control-Allow-Origin",
-          "https://scholarship-form-birla-4vuq.vercel.app/"
+          "https://scholarship-form-birla-4vuq.vercel.app"
         )
         .status(200)
         .json({ success: true, message: "User logged in successfully" });
