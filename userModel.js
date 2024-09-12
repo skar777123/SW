@@ -6,15 +6,11 @@ const user = new Schema(
       type: String,
       required: true,
     },
-    department: {
+    program: {
       type: String,
       required: true,
     },
     DOB: {
-      type: String,
-      required: true,
-    },
-    course: {
       type: String,
       required: true,
     },
@@ -76,14 +72,12 @@ const user = new Schema(
     },
     OtherFoS: {
       type: String,
-      required: true,
     },
     OtherFoSyes: {
       type: String,
     },
     financeAssist: {
       type: String,
-      required: true,
     },
     bankName: {
       type: String,
