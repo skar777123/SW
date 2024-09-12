@@ -6,13 +6,13 @@ import cors from "cors";
 import cluster from "cluster";
 import os from "os";
 
-const totalCPUs = os.cpus().length;
+//const totalCPUs = os.cpus().length;
 
-if (cluster.isPrimary) {
-  for (let i = 0; i < totalCPUs; i++) {
-  cluster.fork();
-}
-} else {
+//if (cluster.isPrimary) {
+  //for (let i = 0; i < totalCPUs; i++) {
+  //cluster.fork();
+//}
+//} else {
 const app = express();
 dotenv.config();
 
@@ -33,5 +33,5 @@ mongoose.connect(process.env.URL).then(() => {
   app.listen(process.env.PORT, () => {
     console.log(`Server is running on port 3000 - ${process.pid}`);
   });
-});
+//});
 
