@@ -129,7 +129,7 @@ export const login = async (req, res) => {
       res.status(400).json({ success: false, message: "Invalid credentials" });
     }
   } catch (error) {
-    req.status(400).json({
+    res.status(400).json({
       success: false,
       message: error.message,
     });
