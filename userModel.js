@@ -29,7 +29,6 @@ const user = new Schema(
     studentId: {
       type: String,
       required: true,
-      unique: true,
     },
     previousMarks: {
       type: String,
@@ -81,7 +80,6 @@ const user = new Schema(
     },
     OtherFoSyes: {
       type: String,
-      required: true,
     },
     financeAssist: {
       type: String,
@@ -89,7 +87,6 @@ const user = new Schema(
     },
     bankName: {
       type: String,
-      required: true,
     },
     bankAccNo: {
       type: String,
@@ -109,15 +106,12 @@ const user = new Schema(
     },
     ReHOD: {
       type: String,
-      required: true,
     },
     ReVP: {
       type: String,
-      required: true,
     },
     ReDoP: {
       type: String,
-      required: true,
     },
     attendance1: {
       type: String,
