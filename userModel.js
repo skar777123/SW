@@ -111,6 +111,10 @@ const user = new Schema(
       type: String,
       required: true,
     },
+    ReVP: {
+      type: String,
+      required: true,
+    },
     ReDoP: {
       type: String,
       required: true,
