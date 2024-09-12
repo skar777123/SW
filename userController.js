@@ -4,8 +4,7 @@ import Admin from "./AdminModel.js";
 export const Data = async (req, res) => {
   const {
     name,
-    department,
-    course,
+    program,
     courseFee,
     DOB,
     feeReceipt,
@@ -39,8 +38,7 @@ export const Data = async (req, res) => {
   try {
     const user = await User.create({
       name,
-      department,
-      course,
+      program,
       courseFee,
       DOB,
       feeReceipt,
