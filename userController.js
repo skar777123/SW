@@ -34,6 +34,8 @@ export const Data = async (req, res) => {
     attendance1,
     attendance2,
     eleBill,
+    photo,
+    sign
   } = req.body;
   try {
     const user = await User.create({
@@ -68,6 +70,8 @@ export const Data = async (req, res) => {
       attendance1,
       attendance2,
       eleBill,
+      photo,
+    sign
     });
     res
       .header(
