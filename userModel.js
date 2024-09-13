@@ -119,6 +119,14 @@ const user = new Schema(
       type: String,
       required: true,
     },
+    photo:{
+      type: String,
+      required: true,
+    },
+    sign:{
+      type: String,
+      required: true,
+    }
   },
   { timestamps: true }
 );
