@@ -161,3 +161,19 @@ export const register = async (req, res) => {
     });
   }
 };
+
+export const deleteUser = async (req, res) => {
+  const { id } = req.body;
+  try {
+    const User = await User.findByIdAndDelete({ _id: id });
+    res.status(200).json({
+      success: true,
+      message: "User deleted",
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
