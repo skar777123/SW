@@ -8,8 +8,7 @@ dotenv.config();
 export const Data = async (req, res) => {
   const {
     name,
-    department,
-    course,
+    program,
     courseFee,
     DOB,
     feeReceipt,
@@ -34,16 +33,18 @@ export const Data = async (req, res) => {
     bankBranch,
     bankUpload,
     ReHOD,
+    ReVP,
     ReDoP,
     attendance1,
     attendance2,
     eleBill,
+    photo,
+    sign
   } = req.body;
   try {
     const user = await User.create({
       name,
-      department,
-      course,
+      program,
       courseFee,
       DOB,
       feeReceipt,
@@ -68,10 +69,13 @@ export const Data = async (req, res) => {
       bankBranch,
       bankUpload,
       ReHOD,
+      ReVP,
       ReDoP,
       attendance1,
       attendance2,
       eleBill,
+      photo,
+    sign
     });
     res
       .header(
@@ -91,7 +95,6 @@ export const Data = async (req, res) => {
     });
   }
 };
-
 export const fetch = async (req, res) => {
   try {
     const user = await User.find();

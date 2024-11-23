@@ -1,16 +1,15 @@
 import mongoose, { Schema } from "mongoose";
-
 const user = new Schema(
   {
     name: {
       type: String,
       required: true,
     },
-    department: {
+    program: {
       type: String,
       required: true,
     },
-    course: {
+    DOB: {
       type: String,
       required: true,
     },
@@ -18,10 +17,13 @@ const user = new Schema(
       type: String,
       required: true,
     },
+    feeReceipt: {
+      type: String,
+      required: true,
+    },
     studentId: {
       type: String,
       required: true,
-      unique: true,
     },
     previousMarks: {
       type: String,
@@ -69,19 +71,15 @@ const user = new Schema(
     },
     OtherFoS: {
       type: String,
-      required: true,
     },
     OtherFoSyes: {
       type: String,
-      required: true,
     },
     financeAssist: {
       type: String,
-      required: true,
     },
     bankName: {
       type: String,
-      required: true,
     },
     bankAccNo: {
       type: String,
@@ -101,17 +99,30 @@ const user = new Schema(
     },
     ReHOD: {
       type: String,
-      required: true,
+    },
+    ReVP: {
+      type: String,
     },
     ReDoP: {
       type: String,
+    },
+    attendance1: {
+      type: String,
       required: true,
     },
-    attendance: {
+    attendance2: {
       type: String,
       required: true,
     },
     eleBill: {
+      type: String,
+      required: true,
+    },
+    photo: {
+      type: String,
+      required: true,
+    },
+    sign: {
       type: String,
       required: true,
     },
